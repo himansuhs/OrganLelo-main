@@ -439,8 +439,8 @@ const Auth = (props) => {
 
                       <div>
                         <label
-                          htmlFor="district"
-                          className="font-semibold leading-8"
+                          for="district"
+                          className="font-semibold  leading-8"
                         >
                           District:<font color="red">*</font>
                         </label>
@@ -450,10 +450,8 @@ const Auth = (props) => {
                           onChange={(e) => setDistrict(e.target.value)}
                           className="w-full p-3 text-md border border-silver rounded"
                         >
-                          {data.states[state]?.districts.map((e, i) => (
-                            <option value={i} key={i}>
-                              {e.district}
-                            </option>
+                          {data.states[state].districts.map((e, i) => (
+                            <option value={i}>{e}</option>
                           ))}
                         </select>
                       </div>
